@@ -1,0 +1,72 @@
+#Homepage{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Entry Animations */
+@keyframes slideInLeft{
+    from{transform:translateX(-200px); opacity:0}
+    to{transform:translateX(0); opacity:1;}
+}
+
+@keyframes slideInCenter{
+    from{transform: scale(0.3); opacity:0;}
+    to{transform: scale(1); opacity:1}
+}
+
+@keyframes slideInRight{
+    from{transform: translateX(200px); opacity: 0;}
+    to{transform: translateX(0); opacity:1;}
+}
+
+
+
+.innerHomepageContainer{
+    display:flex;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    flex-direction:column;
+    justify-content: center;
+    min-width: 600px;
+    
+}
+
+.homepageText{
+    color: rgb(41, 233, 223);
+    white-space: nowrap;
+    line-height:2;
+    
+}
+
+.homepageTextOne{
+    animation: slideInLeft 0.8s ease forwards;
+    transition: transform 0.05s linear;
+    font-size: 2rem;
+    align-self: flex-start;
+    margin-left: clamp(60px,5vw,120px);
+}
+
+
+.homepageTextTwo{
+    animation: slideInCenter 0.8s ease forwards;
+    transition: transform 0.05s linear;
+    font-size: 5rem;
+    align-self:center;
+    margin-top:-20px;
+}
+
+
+
+.homepageTextThree{
+    animation: slideInRight 0.8s ease forwards;
+    transition: transform 0.05s linear;
+    font-size:2rem;
+    align-self: flex-end;
+    margin-right: 60px;
+    margin-top: -18px;
+}
+

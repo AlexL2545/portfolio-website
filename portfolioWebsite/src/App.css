@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, a{
+  color: rgb(255, 255, 255);
+  font:700px;
+}
+
+.mainBodyContainer{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainBodyContainer canvas{
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+}
+
+.mainBodyContainer > div:not(.headerContainer){
+  position: relative;
+  z-index: 1;
+}
+
+.container{
+  min-height: 100vh;
+}
+
+.headerContainer{
+  min-height: 3vh;
+  display:flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+}

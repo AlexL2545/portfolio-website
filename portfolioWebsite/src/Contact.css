@@ -1,0 +1,51 @@
+#Contact{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+/* Entry Animation */
+@keyframes fadeInUp {
+    from { transform: translateY(80px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.innerContactContainer{
+    border: 10px solid #4ef1dccc;
+    background: #124ebd86; 
+    border-radius: 50px;
+    opacity:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 30px 40px;
+    width: clamp(600px, 25vw, 800px);
+    height: clamp(600px, 25vh, 800px);
+}
+
+.innerContactContainer.visible {
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+.contactInfoText{
+    font-size: 2em;
+    color: rgb(41, 233, 223);
+    align-self: flex-start;
+    text-decoration: underline;
+    margin-bottom: 32px;
+}
+
+.contactIconRowContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    margin: 25px 0;
+}
+
+.resumeLink{
+    margin-top: 32px;
+    font-size: 1.2em;
+}
